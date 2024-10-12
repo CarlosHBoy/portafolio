@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Hernández Pech - Diseñador Gráfico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="no-background">Carlos Manuel Hernández Pech</h1>
+        <p class="highlight no-background">Diseñador Gráfico & Desarrollador Web</p>
+    </header>
+
+    <section id="about">
+        <h2>Sobre Mí</h2>
+        <div class="about-text">
+            <p>Tengo 22 año, vivo en la ciudad de Cancún, Quintana Roo,soy un apasionado de las nuevas tecnologías, con gusto por la programación web, fotografía, edición de videos y fotos.<br/>Además de tomar fotografías también me gusta salir a pescar o caminar por la zona hotelera</p>
+            <p>Actualmente estoy estudiando la Lic. en administración virtual en el Instituto Tecnológico de Mérida - TecNM.</p>
+        </div>
+
+        <!-- Imagen animada -->
+        <div class="image-section">
+            <p class="highlight jumping-text">Desplazar</p>
+            <img src="imagenes/raton1.png" alt="Raton" class="jumping-image small-icon">
+            <img src="imagenes/abajo1.png" alt="Flecha abajo" class="jumping-image arrow-image">
+        </div>        
+    </section>
+
+    <section id="projects">
+        <h2>Proyectos personales</h2>
+        <div class="project" data-url="https://www.instagram.com/carlosh_photograper/">
+            <h3>Perfil de Instagram</h3>
+            <p>Al darle click aquí, te dirigirás a mi perfil de Instagram. En el podrás encontrar mis videos y algunas fotografías que he realizado a lo largo del tiempo, actualmente lo utilizo como un pequeño portafolio virtual</p>
+            <section id="instagram-preview">
+                <h2>Vista previa de Instagram</h2>
+                <div class="instagram-feed">
+                    <iframe src="https://www.instagram.com/carlosh_photograper/embed" 
+                            width="605" 
+                            height="450" 
+                            frameborder="0" 
+                            scrolling="no" 
+                            allowtransparency="true">
+                    </iframe>
+                </div>
+            </section>          
+        </div>
+        
+        <div class="project" data-url="https://www.youtube.com/@CarlosHBoy">
+            <h3>Canal de YouTube</h3>
+            <p>Al darle click aquí, te dirigirás a mi canal de YouTube. En este suelo subir shorts, normalmente los mismos que en mi Instagram, también subo videos estilo vlogs y de vez en cuando tutoriales.</p>
+            <section id="youtube-preview">
+                <h2>Vista previa de YouTube</h2>
+                <div class="youtube-feed">
+                    <iframe width="605" 
+                            height="450" 
+                            src="https://www.youtube.com/@CarlosHFotos20/featured" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Contacto</h2>
+        <p>Correo: <a href="https://mail.google.com/mail/?view=cm&to=carlosmhp20@gmail.com&su=Este%20es%20el%20asunto" target="_blank" class="highlight" id="email-link">carlosmhp20@gmail.com</a></p>
+        <span class="tooltip" id="email-tooltip">Al darle click aquí,<br/>te dirigirá a Gmail<br/>para enviar un correo.</span>
+        <p>WhatsApp: <a href="https://wa.me/529986452170" target="_blank" class="highlight" id="wsp-link">+52 998 645 2170</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/carlosh_photograper/" target="_blank" class="highlight">@carlosh_photograper</a></p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

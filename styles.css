@@ -1,0 +1,140 @@
+/* Fondo azul oscuro */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, rgb(27, 39, 49), #333333);
+    color: #fff;
+    line-height: 1.6;
+    text-align: center; /* Asegura que el texto esté centrado */
+    padding: 1rem;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Scroll oscuro */
+body.scrolling {
+    background: linear-gradient(to bottom, #000000, rgb(27, 39, 49));
+}
+
+/* Cambiar verde a #22b573 */
+.highlight {
+    color: #22b573; /* Nuevo verde */
+}
+
+header .highlight {
+    color: #22b573;
+    font-size: 1.3rem; /* Aumenta el tamaño */
+}
+
+.project {
+    background-color: #22b573cb;
+    margin: 2rem auto; /* Centrado horizontal con auto */
+    padding: 1rem;
+    border-radius: 5px;
+    color: #e0e0e0;
+    transition: transform 0.3s ease;
+    max-width: 600px;
+    cursor: pointer;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    background-color: #1f8f5b;
+}
+
+/* Sección para el cuadro de "Desplazar" */
+.image-section {
+    display: flex; /* Usar flexbox para centrar */
+    flex-direction: column; /* Alinear verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+}
+/* Más pequeño el cuadro de "Desplazar" e imágenes al 50% */
+.jumping-image, .arrow-image {
+    animation: jump 2s infinite;
+    width: 20px; /* Tamaño reducido al 50% */
+    display: block; /* Se asegura que la imagen sea un bloque */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+/* Quiero más chico la flecha sin cambiar el mouse */
+.arrow-image {
+    width: 13px;
+}
+.jumping-text {
+    animation: jump 2s infinite; /* Mantiene la animación */
+    margin-bottom: 1px; /* Espacio entre el texto y la imagen */
+    font-size: 0.8rem; /* Tamaño del texto */
+}
+
+/* Animación de salto */
+@keyframes jump {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Animación de flotante */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+/* Sección de contacto sin fondo */
+footer {
+    padding: 2rem;
+    background: none; /* Sin fondo */
+    margin-top: 10rem;
+    text-align: center; /* Centrar texto en el footer */
+}
+
+/* Flotante de contacto para gmail */
+.tooltip {
+    display: none; /* Ocultar por defecto */
+    position: absolute; /* Posicionar de manera absoluta */
+    background-color: rgba(27, 39, 49, 0.800); /* Fondo oscuro con algo de transparencia */
+    color: white; /* Color de texto blanco */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 0.9rem; /* Tamaño de fuente */
+    z-index: 100; /* Asegurarse de que esté encima de otros elementos */
+    transition: opacity 0.3s ease; /* Efecto de transición */
+    opacity: 0; /* Inicialmente transparente */
+}
+
+/* Estilo para mostrar el tooltip */
+.show {
+    display: block; /* Mostrar el tooltip */
+    opacity: 1; /* Hacerlo visible */
+}
+
+/* Para móviles */
+@media (max-width: 768px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    .project {
+        max-width: 90%; /* Ajustar el ancho en móviles */
+    }
+}
+/* Preview de contenido - Ajustes generales */
+.instagram-feed, .youtube-feed {
+    height: 400px; /* Ajusta la altura como desees */
+    overflow-y: scroll; /* Permitir desplazamiento vertical */
+    border: 0px solid #ccc; /* Opcional: borde para definir el área */
+    margin: 0 auto; /* Centra el contenedor */
+    width: 100%; /* Hacer que ocupe el 100% del ancho disponible */
+    max-width: 605px; /* Máximo ancho en pantallas grandes */
+}
+
+/* Para móviles */
+@media (max-width: 768px) {
+    .instagram-feed, .youtube-feed {
+        width: 100%; /* Hacer que ocupe el ancho completo en móviles */
+        height: 300px; /* Reducir la altura en dispositivos móviles */
+    }
+
+    iframe {
+        width: 100%; /* Hacer que el iframe se ajuste al contenedor */
+        height: 100%; /* Mantener el aspecto proporcionado */
+    }
+}
+
