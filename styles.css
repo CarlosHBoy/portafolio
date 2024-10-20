@@ -5,7 +5,10 @@ body {
     color: #fff;
     line-height: 1.6;
     text-align: center; /* Asegura que el texto esté centrado */
+    max-width: 900px;
+    margin: 1rem auto; /* Centrado horizontal con auto */
     padding: 1rem;
+    border-radius: 5px;
     transition: background 0.5s ease-in-out;
 }
 
@@ -14,30 +17,53 @@ body.scrolling {
     background: linear-gradient(to bottom, #000000, rgb(27, 39, 49));
 }
 
-/* Cambiar verde a #22b573 */
+/* Texto desplazar */
 .highlight {
     color: #22b573; /* Nuevo verde */
 }
 
-header .highlight {
+header .highlight { /* Texto debajo del nombre */
     color: #22b573;
     font-size: 1.3rem; /* Aumenta el tamaño */
 }
 
 .project {
-    background-color: #22b573cb;
-    margin: 2rem auto; /* Centrado horizontal con auto */
+    background-color: #138856; /* Color de perfiles: yt e ig */
     padding: 1rem;
     border-radius: 5px;
     color: #e0e0e0;
     transition: transform 0.3s ease;
-    max-width: 600px;
+    width: 100%; /* Asegurar que el proyecto ocupe todo el ancho disponible */
+    max-width: 400px; /* Ancho máximo para cada proyecto */
+    margin: 0 auto; /* Centrar cada proyecto individualmente */
     cursor: pointer;
 }
 
 .project:hover {
     transform: scale(1.05);
-    background-color: #1f8f5b;
+    background-color: #0f6d47; /* Color al poner cursor encima de perfiles: YT e ig */
+}
+
+/* Estilo para el contenedor de los proyectos */
+.projects-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 25px; /* Espacio entre los proyectos */
+    max-width: 900px; /* Ajusta el ancho máximo del contenedor */
+    margin: 0 auto; /* Centrado horizontal del contenedor */
+    padding: 1rem; /* Añadir algo de padding */
+    justify-content: center; /* Centrar el grid dentro del contenedor */
+}
+
+/* Ajuste para pantallas más pequeñas: una sola columna */
+@media (max-width: 768px) {
+    .projects-wrapper {
+        grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
+    }
+    
+    .project {
+        max-width: 90%; /* Ajustar el ancho en móviles */
+    }
 }
 
 /* Sección para el cuadro de "Desplazar" */
@@ -46,6 +72,7 @@ header .highlight {
     flex-direction: column; /* Alinear verticalmente */
     align-items: center; /* Centrar horizontalmente */
 }
+
 /* Más pequeño el cuadro de "Desplazar" e imágenes al 50% */
 .jumping-image, .arrow-image {
     animation: jump 2s infinite;
@@ -53,10 +80,12 @@ header .highlight {
     display: block; /* Se asegura que la imagen sea un bloque */
     margin: 0 auto; /* Centrar horizontalmente */
 }
+
 /* Quiero más chico la flecha sin cambiar el mouse */
 .arrow-image {
     width: 13px;
 }
+
 .jumping-text {
     animation: jump 2s infinite; /* Mantiene la animación */
     margin-bottom: 1px; /* Espacio entre el texto y la imagen */
@@ -112,9 +141,10 @@ footer {
     }
 
     .project {
-        max-width: 90%; /* Ajustar el ancho en móviles */
+        max-width: 100%; /* Ajustar el ancho en móviles */
     }
 }
+
 /* Preview de contenido - Ajustes generales */
 .instagram-feed, .youtube-feed {
     height: 400px; /* Ajusta la altura como desees */
@@ -137,4 +167,3 @@ footer {
         height: 100%; /* Mantener el aspecto proporcionado */
     }
 }
-
